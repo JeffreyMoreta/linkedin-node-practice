@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="./public/css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="./public/style.css" type="text/css" />
+	<link rel="stylesheet" href="./public/css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="./public/css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="./public/css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="./public/css/magnific-popup.css" type="text/css" />
+	<link rel="stylesheet" href="./public/css/custom.css" type="text/css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="./public/js/jquery.js" defer></script>
+	<script src="./public/js/plugins.min.js" defer></script>
+	<script src="./public/js/functions.js" defer></script>
+	<script src="./public/js/script-main.js" defer></script>
+
+	<!-- Document Title
+	============================================= -->
+	<title>Node Practice</title>
+
+</head>
+
+<body class="stretched side-header">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-between">
+						
+						
+						<button class="button button-border button-rounded btn-block button-fill fill-from-left button-teal" type="submit" id="template-grabstudent-pull" name="template-grabstudent-submit" value="submit">
+							<span>
+								Grab Profiles
+								<i class='icon-line2-cloud-download'></i>
+							</span>
+						</button>
+
+						<div class="form-widget">
+							<div class="form-result"></div>
+
+							<form class="row" id="contactform" action="/students" method="post">
+						
+								<div class="form-process"></div>
+						
+								<div class="col-md-12 form-group">
+									<label for="template-contactform-name">Name <small>*</small></label>
+									<input type="text" id="template-contactform-name" name="template-contactform-name" value="Jeffrey Moreta" class="required form-control " />
+								</div>
+								
+								<div class="col-md-12 form-group">
+									<label for="template-contactform-role">Role <small>*</small></label>
+									<input type="text" id="template-contactform-role" name="template-contactform-role" value="Software Developer" class="required form-control" />
+								</div>
+								
+								<div class="col-md-12 form-group">
+									<label for="template-contactform-company">Company <small>*</small></label>
+									<input type="text" id="template-contactform-company" name="template-contactform-company" value="Amazon" class="required form-control" />
+								</div>
+								
+								<div class="col-md-12 form-group">
+									<label for="template-contactform-linkedin">Linkedin <small>*</small></label>
+									<input type="text" id="template-contactform-linkedin" name="template-contactform-linkedin" value="https://www.linkedin.com/in/jeffrey-moreta/" class="form-control" />
+								</div>
+								
+								<div class="col-md-12 form-group">
+									<label for="template-contactform-picture">Picture URL <small>*</small></label>
+									<input type="text" id="template-contactform-picture" name="template-contactform-picture" value="https://media-exp1.licdn.com/dms/image/C5603AQFHEWYNTOhLEg/profile-displayphoto-shrink_200_200/0/1517413042436?e=1620864000&v=beta&t=EXJmUHocjnhzzQT7GJgpMZpSab-LehTd9-thMd2018U" class="form-control" />
+								</div>
+
+								<div class="w-100"></div>
+						
+								<div class="col-md-12">
+									<button class="button button-border button-rounded btn-block button-fill fill-from-left button-teal" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">
+										<span>
+											Submit
+											<i class='icon-line2-cloud-upload'></i>
+										</span>
+									</button>
+								</div>
+						
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<!-- Portfolio Items
+				============================================= -->
+				<div id="portfolio" class="portfolio row grid-container portfolio-reveal no-gutters" data-layout="fitRows">
+					<!-- Content will be injected via JS -->
+				</div><!-- #portfolio end -->
+
+			</div>
+		</section><!-- #content end -->
+
+		<!-- Modal
+		============================================= -->
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" aria-labelledby="myLargeModalLabel" style="display: none;" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-body">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="myModalLabel">Edit</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						</div>
+						<div class="modal-body">
+							
+							<form class="row align-items-center forms-section" id="edit-form" action="/students" method="post">
+
+									<div class="col-12 form-group mb-4">
+										<label for="get-edit-form-name">Name:</label>
+										<input type="text" name="get-edit-form-name" id="get-edit-form-name" class="form-control form-control-lg required" value="" placeholder="">
+									</div>
+
+									<div class="col-12 form-group mb-4">
+										<label for="get-edit-form-role">Role:</label>
+										<input type="text" name="get-edit-form-role" id="get-edit-form-role" class="form-control form-control-lg required" value="" placeholder="">
+									</div>
+
+									<div class="col-12 form-group mb-4">
+										<label for="get-edit-form-company">Company:</label>
+										<input type="text" name="get-edit-form-company" id="get-edit-form-company" class="form-control form-control-lg required" value="" placeholder="">
+									</div>
+
+									<div class="col-12 form-group mb-4">
+										<label for="get-edit-form-company">Linkedin:</label>
+										<input type="text" name="get-edit-form-company" id="get-edit-form-company" class="form-control form-control-lg required" value="" placeholder="">
+									</div>
+
+									<div class="col-12 form-group mb-4">
+										<label for="get-edit-form-company">Picture:</label>
+										<input type="text" name="get-edit-form-company" id="get-edit-form-company" class="form-control form-control-lg required" value="" placeholder="">
+									</div>
+
+									<div class="col-12 d-flex">
+										<button type="submit" name="get-edit-form-submit" class="button button-rounded bg-danger tab-action-btn-next-submit col button-large">Submit <i class="icon-line-edit"></i></button>
+									</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+
+				<div class="container clearfix">
+
+					<div class="center">
+						Practice moving information from the front-end to back-end to front-end<br>
+					</div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+</body>
+</html>
+
