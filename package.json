@@ -11,7 +11,10 @@
   "author": "Jeffrey Moreta",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node":"^14.10.0"
   }
 }
